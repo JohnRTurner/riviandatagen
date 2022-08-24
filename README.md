@@ -4,7 +4,6 @@ The application creates test data in Kafka
 
 This project was generated with Python 3 and Docker.
 
-
 ## Loading the Data to Kafka
 1. Setup Kafak Server as needed - [Kafka Quick Setup][kafkasetup]
 1. Obtain Server - can use AWS
@@ -28,18 +27,18 @@ This project was generated with Python 3 and Docker.
 ## Kafka Data Load Code Description
 Can view the code on [GitHub][github]
 
-| Filename                      | Description                                     | 
-|-------------------------------|-------------------------------------------------|
-| main.py                       | Main module takes parameters and runs generator |
-| datagenerators.py             | Creates data and sends to Kafka                 |
-| kafka.py                      | wrapper for Kafka calls                         |
-| README.md                     | This file                                       |
-| Dockerfile                    | Files not to copy to the repository             |
-| .dockerignore                 | File to generate docker image                   |
-| requirements.txt              | Python library requirements                     |
-| kafkasetup/README.md          | Instructions to setup Kafka docker              |
-| kafkasetup/docker-compose.yml | Sample docker-compose.yml                       |
-
+| Filename                                       | Description                                      | 
+|------------------------------------------------|--------------------------------------------------|
+| main.py                                        | Main module takes parameters and runs generator  |
+| datagenerators.py                              | Creates data and sends to Kafka                  |
+| kafka.py                                       | wrapper for Kafka calls                          |
+| README.md                                      | This file                                        |
+| Dockerfile                                     | Files not to copy to the repository              |
+| .dockerignore                                  | File to generate docker image                    |
+| requirements.txt                               | Python library requirements                      |
+| [kafkasetup/README.md][kafkasetup]             | Instructions to setup Kafka docker               |
+| kafkasetup/docker-compose.yml                  | Sample docker-compose.yml                        |
+| [singlestoresetup/README.md][singlestoresetup] | Instructions to setup SingleStore with Pipelines |
 
 
 [github]: https://github.com/JohnRTurner/riviandatagen

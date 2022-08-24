@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0775d097-7ee0-49b3-84da-b1dafda3ae74" name="Changes" comment="Initial Commit">
-      <change afterPath="$PROJECT_DIR$/kafkasetup/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kafkasetup/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-    </list>
+    <list default="true" id="0775d097-7ee0-49b3-84da-b1dafda3ae74" name="Changes" comment="Added Kafka Details" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -138,7 +133,7 @@
       <option name="presentableId" value="Default" />
       <updated>1661293448828</updated>
       <workItem from="1661293452185" duration="11161000" />
-      <workItem from="1661356139963" duration="4570000" />
+      <workItem from="1661356139963" duration="5139000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1661357589198</created>
@@ -147,7 +142,21 @@
       <option name="project" value="LOCAL" />
       <updated>1661357589198</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added Kafka Details">
+      <created>1661361762183</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1661361762183</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Added Kafka Details">
+      <created>1661361836278</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1661361836278</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -166,7 +175,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial Commit" />
+    <MESSAGE value="Added Kafka Details" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Kafka Details" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

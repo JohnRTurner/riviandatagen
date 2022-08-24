@@ -24,9 +24,11 @@ def gen_event(thread):
     '_seq': fake.random_number(digits=6),
     'car_ownershp_id': fake.random_number(digits=10),
     'motor_temperature': fake.random_int(50, 75),
-    'temperature_IGBT_A': fake.random_int(50, 75),
-    'temperature_IGBT_B': fake.random_int(50, 75),
-    'temperature_IGBT_C': fake.random_int(50, 75),
+    'temperatures': {
+        'temperature_IGBTA': fake.random_int(50, 75),
+        'temperature_IGBT_B': fake.random_int(50, 75),
+        'temperature_IGBT_C': fake.random_int(50, 75)
+     },
     '_id': ((time.clock_gettime_ns(time.CLOCK_MONOTONIC_RAW) % 100000000000) * 100) + thread,
     'updated': '',
     '_source_type': np.random.choice(source_type),

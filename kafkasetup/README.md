@@ -1,7 +1,7 @@
 # KAFKA Setup
 
 ## Create Server in AWS
-- server: c6a.2xlarge
+- Server: c6a.2xlarge
 - OS: ubuntu 22.04lts
 
 - Tags:
@@ -14,22 +14,24 @@
 | Project    | Riven_Test       |
 
 - Key Pair: xxxxx
-- Storage: 256
+- Storage: 256G
 
-## Login and upgrade box
+## Setup Kafka
+
+### Login and upgrade box
 ```
 ssh -i $HOME/Downloads/xxxxx.pem ubuntu@yyyyy.compute-1.amazonaws.com
 sudo apt update
 sudo apt upgrade -y
 ```
-## reboot then login and install docker
+### Reboot then login and install docker
 ```
 ssh -i $HOME/Downloads/xxxxx.pem ubuntu@yyyyy.compute-1.amazonaws.com
 sudo apt install docker.io docker-compose nmon kafkacat -y
 sudo usermod -a -G docker ubuntu
 exit
 ```
-## login again create and run docker
+### Login, docker-compose and run the docker
 ```
 ssh -i $HOME/Downloads/xxxxx.pem ubuntu@yyyyy.compute-1.amazonaws.com
 git clone https://github.com/JohnRTurner/riviandatagen.git

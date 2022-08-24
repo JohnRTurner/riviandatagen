@@ -5,7 +5,7 @@ The application creates test data in Kafka
 This project was generated with Python 3 and Docker.
 
 
-## Running the Demo
+## Loading the Data to Kafka
 1. Setup Kafak Server as needed - [Kafka Quick Setup][kafkasetup]
 1. Obtain Server - can use AWS
 1. Install Docker - `sudo apt install docker.io nmon -y`
@@ -15,7 +15,7 @@ This project was generated with Python 3 and Docker.
 1. Build the Docker image `docker build riviandatagen -t riviandatagen`
 1. Run the Image `docker run -d --name riviandatagen -e KAFKA_SERVER=localhost:29092 -e BATCH_SIZE=1000 -e KAFKA_TOPIC=test -e PROC_COUNT=8 -t riviandatagen`
 1. View the logs `docker logs -f riviandatagen`
-
+1. Proceed to loading the data [SingleStore Setup][singlestoresetup]
 
 | Option       | Description                   |
 |--------------|-------------------------------|
@@ -25,10 +25,8 @@ This project was generated with Python 3 and Docker.
 | KAFKA_SERVER | Kakfka Server                 |         
 
 
-
-
-## Code Description
-Can view the code on [github][github]
+## Kafka Data Load Code Description
+Can view the code on [GitHub][github]
 
 | Filename                      | Description                                     | 
 |-------------------------------|-------------------------------------------------|
@@ -43,7 +41,7 @@ Can view the code on [github][github]
 | kafkasetup/docker-compose.yml | Sample docker-compose.yml                       |
 
 
-[try-free]: https://www.singlestore.com/try-free/
-[portal]: https://portal.singlestore.com/
+
 [github]: https://github.com/JohnRTurner/riviandatagen
 [kafkasetup]: kafkasetup/README.md
+[singlestoresetup]: singlestoresetup/README.md

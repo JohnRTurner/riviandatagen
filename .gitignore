@@ -1,0 +1,7 @@
+/bin
+/lib/__pycache__
+/lib/python3.9
+/include
+/venv
+/.idea
+pyvenv.cfg

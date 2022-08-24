@@ -45,5 +45,5 @@ Can view the code on [github][github]
 
 [try-free]: https://www.singlestore.com/try-free/
 [portal]: https://portal.singlestore.com/
-[github]: https://github.com/JohnRTurner/oltpnodejs
+[github]: https://github.com/JohnRTurner/riviandatagen
 [kafkasetup]: kafkasetup/README.md

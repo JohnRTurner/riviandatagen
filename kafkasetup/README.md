@@ -35,8 +35,8 @@ exit
 ```
 ssh -i $HOME/Downloads/xxxxx.pem ubuntu@yyyyy.compute-1.amazonaws.com
 git clone https://github.com/JohnRTurner/riviandatagen.git
-cp rivandatagen/kafkasetup/docker-compose.yml .
-vi docker-compose.yml and replace yyyyy.compute-1.amazonaws.com with the proper host.
+cp riviandatagen/kafkasetup/docker-compose.yml .
+export MNAME=$(curl http://checkip.amazonaws.com 2>/dev/null |nslookup| grep "name =" |sed "s/.*name = //"|sed "s/.$//")
 docker-compose up -d
 ```
 ## General Instructions
@@ -46,5 +46,5 @@ docker-compose stop
 ```
 ### Start Kafka
 ```
-docker-compose stop
+docker-compose start
 ```

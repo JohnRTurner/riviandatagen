@@ -35,7 +35,7 @@ def gen_event(thread):
    'car_ownership_id': fake.random_number(digits=8),
    'realColumns': realColumns,
    'motor_temperature': fake.pyfloat(2,2,True,50,75), #pyfloat(left_digits=None, right_digits=None, positive=False, min_value=None, max_value=None)
-   'temperature_IGBTA': fake.pyfloat(2,2,True,50,75),
+   'temperature_IGBT_A': fake.pyfloat(2,2,True,50,75),
    'temperature_IGBT_B': fake.pyfloat(2,2,True,50,75),
    'temperature_IGBT_C': fake.pyfloat(2,2,True,50,75),
    '_id': ((time.clock_gettime_ns(time.CLOCK_MONOTONIC_RAW) % 100000000000) * 100) + thread,

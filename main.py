@@ -4,7 +4,6 @@ from time import time
 import multiprocessing as mp
 from kafka import kafka_producer, acked
 from datagenerators import gen_events
-from faker import Faker
 from json import dumps
 
 parser = argparse.ArgumentParser()
@@ -35,14 +34,13 @@ batch_size    = int(args.batch_size)
 topic         = str(args.topic)
 kafka_server  = str(args.kafka_server)
 
-fake = Faker()
-#kafka_server    = os.getenv('KAFKA_SERVER')
 
 def produce_orders(batch_size, topic, thread):
   producer = kafka_producer(server=kafka_server)
   while True:
     start = time()
     events = gen_events(batch_size, thread)
+    print(thread, events[0])
     producer.poll(0.0)
     for o in events:
       producer.produce(topic, value=dumps(o).encode('utf-8'), callback=acked)

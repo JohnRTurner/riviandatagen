@@ -32,7 +32,7 @@ def gen_event(thread, fake):
    '_event_timing': fake.random_int(1,10),
    '_updated': datetime.today().strftime('%Y-%m-%dT%H:%M:%S.%f'),
    '_seq': fake.random_number(digits=6),
-   'car_ownershp_id': fake.random_number(digits=8),
+   'car_ownership_id': fake.random_number(digits=8),
    'realColumns': realColumns,
    'motor_temperature': fake.pyfloat(2,2,True,50,75), #pyfloat(left_digits=None, right_digits=None, positive=False, min_value=None, max_value=None)
    'temperature_IGBT_A': fake.pyfloat(2,2,True,50,75),

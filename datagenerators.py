@@ -5,16 +5,16 @@ from faker import Faker
 from datetime import datetime
 import numpy as np
 
-fake = Faker()
+
 
 #Define a list
-type=['Type A','Type B','Type C', 'Type D', 'Type E']
-sub_type=['Sub Type 100', 'Sub Type 200','Sub Type 300','Sub Type 400','Sub Type 500']
+type=['type_a','type_b','type_c', 'type_d', 'type_e']
+sub_type=['sub_type_100', 'sub_type_200','sub_type_300','sub_type_400','sub_type_500']
 source_type=['Car','Charger','R1T','R1S','Commercial Van']
 tenant=['Rivian','Corporate','Fleet','Other']
 realColumns=['fleet','raw_stream_ref','_subtype','_type','_updated','_seq','car_ownership_id','temperature_IGBT_A','motor_temperature','temperature_IGBT_C','temperature_IGBT_B','_id','updated','_source_type','tenant','std_stream_ref']
  
-def gen_event(thread):
+def gen_event(thread, fake):
  return {
    "fleet": fake.pystr(32,32) + '/' + fake.pystr(32,32) + '/' + fake.pystr(32,32),
    'std_stream_ref': {
@@ -35,7 +35,7 @@ def gen_event(thread):
    'car_ownershp_id': fake.random_number(digits=8),
    'realColumns': realColumns,
    'motor_temperature': fake.pyfloat(2,2,True,50,75), #pyfloat(left_digits=None, right_digits=None, positive=False, min_value=None, max_value=None)
-   'temperature_IGBTA': fake.pyfloat(2,2,True,50,75),
+   'temperature_IGBT_A': fake.pyfloat(2,2,True,50,75),
    'temperature_IGBT_B': fake.pyfloat(2,2,True,50,75),
    'temperature_IGBT_C': fake.pyfloat(2,2,True,50,75),
    '_id': ((time.clock_gettime_ns(time.CLOCK_MONOTONIC_RAW) % 100000000000) * 100) + thread,
@@ -47,4 +47,6 @@ def gen_event(thread):
 
 
 def gen_events(batch_size, thread):
-  return [gen_event(thread) for _ in range(1, (batch_size + 1))]
+  Faker.seed()
+  fake = Faker()
+  return [gen_event(thread, fake) for _ in range(1, (batch_size + 1))]

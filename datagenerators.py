@@ -8,7 +8,7 @@ import numpy as np
 
 
 #Define a list
-type=['type_a','type_b','type_c', 'type_d', 'type_e']
+type=['type_a','type_b','type_c', 'type_d', 'type_e' ]
 sub_type=['sub_type_100', 'sub_type_200','sub_type_300','sub_type_400','sub_type_500']
 source_type=['Car','Charger','R1T','R1S','Commercial Van']
 tenant=['Rivian','Corporate','Fleet','Other']

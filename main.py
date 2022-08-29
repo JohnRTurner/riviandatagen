@@ -40,7 +40,7 @@ def produce_orders(batch_size, topic, thread):
   while True:
     start = time()
     events = gen_events(batch_size, thread)
-    print(thread, events[0])
+    #print(thread, events[0])
     producer.poll(0.0)
     for o in events:
       producer.produce(topic, value=dumps(o).encode('utf-8'), callback=acked)

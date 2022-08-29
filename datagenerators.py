@@ -8,8 +8,8 @@ import numpy as np
 fake = Faker()
 
 #Define a list
-type=['Type A','Type B','Type C', 'Type D', 'Type E']
-sub_type=['Sub Type 100', 'Sub Type 200','Sub Type 300','Sub Type 400','Sub Type 500']
+type=['type_a','type_b','type_c', 'type_d', 'type_e']
+sub_type=['sub_type_100', 'sub_type_200','sub_type_300','sub_type_400','sub_type_500']
 source_type=['Car','Charger','R1T','R1S','Commercial Van']
 tenant=['Rivian','Corporate','Fleet','Other']
 realColumns=['fleet','raw_stream_ref','_subtype','_type','_updated','_seq','car_ownership_id','temperature_IGBT_A','motor_temperature','temperature_IGBT_C','temperature_IGBT_B','_id','updated','_source_type','tenant','std_stream_ref']
